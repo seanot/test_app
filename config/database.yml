@@ -1,0 +1,16 @@
+# Ansible managed: /Users/seanotoole/rails_5.0.0_projects/test_app/railsbox/ansible/roles/postgresql/templates/database.yml.j2 modified on 2016-07-01 12:22:04 by seanotoole on MacBook-Pro-4.local
+
+default: &default
+  adapter: postgresql
+  pool: 5
+
+development:
+  <<: *default
+  database: rails_dev
+
+  username: vagrant
+  password: 
+
+test:
+  <<: *default
+  database: rails_dev_test
